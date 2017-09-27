@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.rotteny.yohrebanho.AnimalAddActivity">
+
+    <RelativeLayout
+        android:id="@+id/campos"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView_proprietario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            style="@style/Base.Widget.AppCompat.EditText"
+            android:text="Proprietario"
+            android:onClick="selectUsuario" />
+
+        <TextView
+            android:id="@+id/textView_brinco_pai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_proprietario"
+            style="@style/Base.Widget.AppCompat.EditText"
+            android:text="Brinco Pai"
+            android:onClick="selectMacho" />
+
+        <TextView
+            android:id="@+id/textView_brinco_mae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_brinco_pai"
+            style="@style/Base.Widget.AppCompat.EditText"
+            android:text="Brinco Mãe"
+            android:onClick="selectFemea" />
+
+        <EditText
+            android:id="@+id/editText_brinco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_brinco_mae"
+            android:hint="Brinco"
+            android:ems="10"
+            android:inputType="textCapCharacters|textPersonName" />
+
+        <EditText
+            android:id="@+id/editText_data_nascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:hint="Data de Nascimento"
+            android:layout_below="@+id/editText_brinco"
+            android:ems="10"
+            android:inputType="date" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/editText_data_nascimento"
+            android:layout_alignParentStart="true" >
+
+            <RadioButton
+                android:id="@+id/radioSexoF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fêmea"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/radioSexoM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Macho"
+                android:onClick="onRadioButtonClicked" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioGroupSexo"
+            android:layout_marginTop="13dp"
+            android:onClick="imgSource"
+            app:srcCompat="@mipmap/sheep512x512" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/campos"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+        <Button
+            android:id="@+id/btnAddAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:layout_alignParentStart="true"
+            android:onClick="saveAnimal"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

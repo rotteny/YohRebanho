@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/editText_ocorrencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ocorrencia"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_weight="0.32" />
+
+    <EditText
+        android:id="@+id/editText_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data da Ocorrencia"
+        android:ems="10"
+        android:inputType="date" />
+
+</LinearLayout>
